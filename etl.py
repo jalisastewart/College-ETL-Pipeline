@@ -38,3 +38,5 @@ def transform(data: dict) -> pd.DataFrame:
     df['domains'] = [','.join(map(str, l)) for l in df['domains']]
     df['web_pages'] = [','.join(map(str, l)) for l in df['web_pages']]
 
+    # Reset the index of the DataFrame
+    df = df.reset_index(drop=True)
