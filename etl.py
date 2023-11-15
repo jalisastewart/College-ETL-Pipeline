@@ -28,4 +28,7 @@ def transform(data: dict) -> pd.DataFrame:
     # Print the total number of universities from API
     print(f"Total number of universities from API {len(data)}")
 
+    # Print the number of universities after filtering for those in Texas
+    print(f"Number of universities in Texas {len(df)}")
+
 
