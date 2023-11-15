@@ -25,4 +25,7 @@ def transform(data: dict) -> pd.DataFrame:
     # Create a DataFrame from the input data
     df = pd.DataFrame(data)
 
+    # Print the total number of universities from API
+    print(f"Total number of universities from API {len(data)}")
+
 
