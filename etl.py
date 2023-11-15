@@ -18,3 +18,11 @@ def extract()-> dict:
 
     # Return data           
     return data
+
+# Transform
+
+def transform(data: dict) -> pd.DataFrame:
+    # Create a DataFrame from the input data
+    df = pd.DataFrame(data)
+
+
