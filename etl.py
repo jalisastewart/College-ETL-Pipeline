@@ -2,9 +2,8 @@
 
 
 # Import python packages
-
-import requests
-import pandas as pd
+import requests 
+import pandas as pd 
 from sqlalchemy import create_engine
 
 # Extract
@@ -43,3 +42,6 @@ def transform(data: dict) -> pd.DataFrame:
 
     # Return a subset of the DataFrame with selected columns
     return df[["domains", "country", "web_pages", "name"]]
+
+data = extract()
+df = transform(data)
