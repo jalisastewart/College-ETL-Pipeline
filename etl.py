@@ -40,3 +40,6 @@ def transform(data: dict) -> pd.DataFrame:
 
     # Reset the index of the DataFrame
     df = df.reset_index(drop=True)
+
+    # Return a subset of the DataFrame with selected columns
+    return df[["domains", "country", "web_pages", "name"]]
