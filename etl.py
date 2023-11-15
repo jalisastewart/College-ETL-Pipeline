@@ -16,5 +16,5 @@ def extract()-> dict:
     # Send a GET request to the API and convert the response to JSON format
     data = requests.get(API_URL).json()
 
-    # Return data
+    # Return data           
     return data
