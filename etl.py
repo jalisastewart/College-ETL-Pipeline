@@ -34,5 +34,7 @@ def transform(data: dict) -> pd.DataFrame:
     # Print the number of universities after filtering for those in Texas
     print(f"Number of universities in Texas {len(df)}")
 
-    
+    # Convert lists in the 'domains' and 'web_pages' columns to strings
+    df['domains'] = [','.join(map(str, l)) for l in df['domains']]
+    df['web_pages'] = [','.join(map(str, l)) for l in df['web_pages']]
 
