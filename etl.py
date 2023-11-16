@@ -45,5 +45,14 @@ def transform(data: dict) -> pd.DataFrame:
     return df[["domains", "country", "web_pages", "name"]]
 
 
+def load(df: pd.DataFrame) -> None:
+
+    # Open the 'config.yaml' file in read mode ('r')
+    with open('config.yaml', 'r') as config_file:
+        config = yaml.safe_load(config_file)['mysql']
+
+
+
+
 data = extract()
 df = transform(data)
