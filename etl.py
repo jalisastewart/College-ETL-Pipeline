@@ -51,6 +51,9 @@ def load(df: pd.DataFrame) -> None:
     with open('config.yaml', 'r') as config_file:
         config = yaml.safe_load(config_file)['mysql']
 
+    #Start MYSql Connection
+    mysql_credentials = f"mysql+mysqlconnector://{config['username']}:{config['password']}@{config['host']}/{config['database']}"
+
 
 
 
