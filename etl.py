@@ -5,6 +5,7 @@
 import requests 
 import pandas as pd 
 from sqlalchemy import create_engine
+import yaml
 
 # Extract
 
@@ -42,6 +43,7 @@ def transform(data: dict) -> pd.DataFrame:
 
     # Return a subset of the DataFrame with selected columns
     return df[["domains", "country", "web_pages", "name"]]
+
 
 data = extract()
 df = transform(data)
