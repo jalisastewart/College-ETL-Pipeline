@@ -60,5 +60,9 @@ def load(df: pd.DataFrame) -> None:
     # Table name
     table_name = 'texas_universities'
 
+
+    # Write the DataFrame to the MySQL database
+    df.to_sql(table_name, mysql_engine, if_exists='replace', index=False)
+
 data = extract()
 df = transform(data)
