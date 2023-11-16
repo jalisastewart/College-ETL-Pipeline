@@ -66,3 +66,4 @@ def load(df: pd.DataFrame) -> None:
 
 data = extract()
 df = transform(data)
+load(df)
