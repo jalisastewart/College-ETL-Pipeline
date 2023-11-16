@@ -57,7 +57,8 @@ def load(df: pd.DataFrame) -> None:
     # Connect SQLAlchemy to connect MYSql
     mysql_engine = create_engine(mysql_credentials)
 
-    
+    # Table name
+    table_name = 'texas_universities'
 
 data = extract()
 df = transform(data)
